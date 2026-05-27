@@ -1,27 +1,11 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import Script from "next/script";
+import { cookies } from "next/headers";
 import { Footer } from "@/components/layouts/Footer";
 import { Header } from "@/components/layouts/Header";
 import { AppProviders } from "@/components/providers/AppProviders";
 import { PageTransition } from "@/components/transitions/PageTransition";
 import "./globals.css";
-
-const themeScript = `
-(function() {
-  try {
-    var storageKey = 'toretto-theme';
-    var theme = localStorage.getItem(storageKey) || 'system';
-    var systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    var resolvedTheme = theme === 'system' ? (systemDark ? 'dark' : 'light') : theme;
-    var root = document.documentElement;
-
-    root.classList.toggle('dark', resolvedTheme === 'dark');
-    root.style.colorScheme = resolvedTheme;
-    root.dataset.theme = resolvedTheme;
-  } catch (error) {}
-})();
-`;
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -56,20 +40,23 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const cookieStore = await cookies();
+  const themeCookie = cookieStore.get("toretto-theme")?.value;
+  const themeClass =
+    themeCookie === "dark" || themeCookie === "light" ? themeCookie : undefined;
+
   return (
     <html
       lang="id"
       suppressHydrationWarning
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
+      data-theme={themeClass}
+      className={`${themeClass ?? ""} ${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
       <body className="app-shell min-h-full">
-        <Script id="theme-init" strategy="beforeInteractive">
-          {themeScript}
-        </Script>
         <AppProviders>
           <div className="min-h-screen app-hero">
             <Header />

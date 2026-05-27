@@ -12,6 +12,20 @@
   --hero-end: rgba(255, 255, 255, 0.9);
 }
 
+@media (prefers-color-scheme: dark) {
+  :root:not(.light):not([data-theme="light"]) {
+    --background: #020617;
+    --foreground: #f8fafc;
+    --surface: rgba(15, 23, 42, 0.56);
+    --surface-strong: rgba(15, 23, 42, 0.82);
+    --border: rgba(255, 255, 255, 0.1);
+    --muted: #cbd5e1;
+    --heading: #ffffff;
+    --hero-start: rgba(251, 191, 36, 0.16);
+    --hero-end: #111827;
+  }
+}
+
 .dark {
   --background: #020617;
   --foreground: #f8fafc;
@@ -22,6 +36,18 @@
   --heading: #ffffff;
   --hero-start: rgba(251, 191, 36, 0.16);
   --hero-end: #111827;
+}
+
+.light {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --surface: rgba(255, 255, 255, 0.82);
+  --surface-strong: rgba(255, 255, 255, 0.96);
+  --border: rgba(15, 23, 42, 0.12);
+  --muted: #475569;
+  --heading: #020617;
+  --hero-start: rgba(245, 158, 11, 0.18);
+  --hero-end: rgba(255, 255, 255, 0.9);
 }
 
 @theme inline {
@@ -76,11 +102,17 @@
 }
 
 html {
-  color-scheme: light;
+  color-scheme: light dark;
 }
 
-.dark {
+html.dark,
+html[data-theme="dark"] {
   color-scheme: dark;
+}
+
+html.light,
+html[data-theme="light"] {
+  color-scheme: light;
 }
 
 .text-white {

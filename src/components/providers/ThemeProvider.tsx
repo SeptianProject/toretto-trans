@@ -20,6 +20,7 @@ interface ThemeContextValue {
 }
 
 const THEME_STORAGE_KEY = "toretto-theme";
+const THEME_COOKIE_KEY = "toretto-theme";
 
 const ThemeContext = createContext<ThemeContextValue | undefined>(undefined);
 
@@ -45,8 +46,18 @@ function applyTheme(theme: ThemeMode) {
   const resolvedTheme = resolveTheme(theme);
 
   document.documentElement.classList.toggle("dark", resolvedTheme === "dark");
+  document.documentElement.classList.toggle("light", resolvedTheme === "light");
   document.documentElement.style.colorScheme = resolvedTheme;
   document.documentElement.dataset.theme = resolvedTheme;
+}
+
+function syncThemeCookie(theme: ThemeMode) {
+  if (typeof document === "undefined") {
+    return;
+  }
+
+  const maxAge = 60 * 60 * 24 * 365;
+  document.cookie = `${THEME_COOKIE_KEY}=${theme}; path=/; max-age=${maxAge}; samesite=lax`;
 }
 
 interface ThemeProviderProps {
@@ -81,6 +92,7 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
     setResolvedTheme(nextResolvedTheme);
     applyTheme(theme);
     window.localStorage.setItem(THEME_STORAGE_KEY, theme);
+    syncThemeCookie(theme);
 
     if (theme !== "system") {
       return;
@@ -91,6 +103,7 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
       const systemResolvedTheme = resolveTheme("system");
       setResolvedTheme(systemResolvedTheme);
       applyTheme("system");
+      syncThemeCookie("system");
     };
 
     if (typeof mediaQuery.addEventListener === "function") {
