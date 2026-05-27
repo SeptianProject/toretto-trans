@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <main className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
-      <section className="rounded-[2rem] border border-white/10 bg-white/5 p-8">
+      <section className="rounded-4xl border border-white/10 bg-white/5 p-8">
         <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-300">
           Tentang Kami
         </p>

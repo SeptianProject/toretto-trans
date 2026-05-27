@@ -1,8 +1,27 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import { Footer } from "@/components/layouts/Footer";
 import { Header } from "@/components/layouts/Header";
+import { AppProviders } from "@/components/providers/AppProviders";
+import { PageTransition } from "@/components/transitions/PageTransition";
 import "./globals.css";
+
+const themeScript = `
+(function() {
+  try {
+    var storageKey = 'toretto-theme';
+    var theme = localStorage.getItem(storageKey) || 'system';
+    var systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var resolvedTheme = theme === 'system' ? (systemDark ? 'dark' : 'light') : theme;
+    var root = document.documentElement;
+
+    root.classList.toggle('dark', resolvedTheme === 'dark');
+    root.style.colorScheme = resolvedTheme;
+    root.dataset.theme = resolvedTheme;
+  } catch (error) {}
+})();
+`;
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,6 +50,10 @@ export const metadata: Metadata = {
     locale: "id_ID",
     type: "website",
   },
+  icons: {
+    icon: "/PT_New_Toretto_Trans_Logo.jpeg",
+    apple: "/PT_New_Toretto_Trans_Logo.jpeg",
+  },
 };
 
 export default function RootLayout({
@@ -41,13 +64,19 @@ export default function RootLayout({
   return (
     <html
       lang="id"
+      suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
-      <body className="min-h-full bg-slate-950 text-slate-100">
-        <div className="min-h-screen bg-[radial-gradient(circle_at_top,rgba(251,191,36,0.16),transparent_32%),linear-gradient(180deg,#020617_0%,#0f172a_50%,#111827_100%)]">
-          <Header />
-          {children}
-          <Footer />
-        </div>
+      <body className="app-shell min-h-full">
+        <Script id="theme-init" strategy="beforeInteractive">
+          {themeScript}
+        </Script>
+        <AppProviders>
+          <div className="min-h-screen app-hero">
+            <Header />
+            <PageTransition>{children}</PageTransition>
+            <Footer />
+          </div>
+        </AppProviders>
       </body>
     </html>
   );
