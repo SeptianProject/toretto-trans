@@ -3,13 +3,13 @@ import Link from "next/link";
 import { mockStats } from "@/data/mock";
 
 export const metadata: Metadata = {
-  title: "Tentang PT Toretto Trans",
+  title: "Tentang PT New Toretto Trans",
   description:
-    "Profil PT Toretto Trans sebagai penyedia Tour Travel Surabaya dan Sewa Bis Surabaya dengan fokus premium dan scalable.",
+    "Profil PT New Toretto Trans sebagai penyedia Tour Travel Surabaya dan Sewa Bis Surabaya dengan fokus premium dan scalable.",
   openGraph: {
-    title: "Tentang PT Toretto Trans",
+    title: "Tentang PT New Toretto Trans",
     description:
-      "Pelajari visi, pengalaman, dan pendekatan layanan PT Toretto Trans.",
+      "Pelajari visi, pengalaman, dan pendekatan layanan PT New Toretto Trans.",
     url: "/tentang",
     type: "website",
   },
@@ -26,7 +26,7 @@ export default function AboutPage() {
           Membangun pengalaman perjalanan yang rapi, nyaman, dan mudah dipesan.
         </h1>
         <p className="mt-6 max-w-3xl text-base leading-8 text-slate-300">
-          PT Toretto Trans fokus pada layanan perjalanan yang premium untuk
+          PT New Toretto Trans fokus pada layanan perjalanan yang premium untuk
           keluarga, komunitas, dan perusahaan. Pendekatan kami sederhana:
           transparan, responsif, dan konsisten di setiap perjalanan.
         </p>

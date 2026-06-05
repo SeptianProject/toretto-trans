@@ -6,9 +6,9 @@ import { formatCurrency } from "@/lib/utils";
 export const metadata: Metadata = {
   title: "Paket Tour",
   description:
-    "Daftar paket tour PT Toretto Trans dengan kategori Pulau, Pantai, Alam, dan Gathering.",
+    "Daftar paket tour PT New Toretto Trans dengan kategori Pulau, Pantai, Alam, dan Gathering.",
   openGraph: {
-    title: "Paket Tour | PT Toretto Trans",
+    title: "Paket Tour | PT New Toretto Trans",
     description:
       "Pilih paket wisata yang sesuai dengan kebutuhan perjalanan Anda.",
     url: "/tour",

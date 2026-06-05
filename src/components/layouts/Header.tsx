@@ -15,8 +15,9 @@ export function Header() {
         <div className="flex items-center gap-3">
           <ThemeToggle />
           <Link
-            href="/tour"
-            className="inline-flex items-center gap-2 rounded-full bg-amber-400 px-4 py-2 text-sm font-semibold text-slate-950 transition hover:bg-amber-300">
+            href="https://wa.me/+6285103632966/"
+            className="inline-flex items-center gap-2 rounded-full bg-amber-400 px-4 py-2 text-sm font-semibold text-slate-950 transition hover:bg-amber-300"
+          >
             <PhoneCall className="h-4 w-4" />
             Pesan Sekarang
           </Link>

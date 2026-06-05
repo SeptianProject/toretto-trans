@@ -15,11 +15,11 @@ import {
 import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: "PT Toretto Trans | Tour Travel Surabaya & Sewa Bis Terpercaya",
+  title: "PT New Toretto Trans | Tour Travel Surabaya & Sewa Bis Terpercaya",
   description:
-    "Jelajahi destinasi impian Anda bersama PT Toretto Trans, penyedia jasa Tour Travel Surabaya dan Sewa Bis Surabaya terbaik. Berpengalaman 5+ tahun melayani Paket Tour Pantai, Alam, hingga Corporate Gathering dengan layanan pemesanan mudah (Easy Bookings).",
+    "Jelajahi destinasi impian Anda bersama PT New Toretto Trans, penyedia jasa Tour Travel Surabaya dan Sewa Bis Surabaya terbaik. Berpengalaman 5+ tahun melayani Paket Tour Pantai, Alam, hingga Corporate Gathering dengan layanan pemesanan mudah (Easy Bookings).",
   openGraph: {
-    title: "PT Toretto Trans | Tour Travel Surabaya & Sewa Bis Terpercaya",
+    title: "PT New Toretto Trans | Tour Travel Surabaya & Sewa Bis Terpercaya",
     description:
       "Paket tour, transportasi, dan perjalanan premium dari Surabaya untuk liburan keluarga maupun corporate gathering.",
     url: "/",
@@ -189,7 +189,7 @@ export default function HomePage() {
               Tour Travel Surabaya & Sewa Bis Terpercaya
             </span>
             <h1 className="mt-6 text-4xl font-semibold tracking-tight text-heading sm:text-5xl lg:text-6xl">
-              Jelajahi Destinasi Populer Bersama PT Toretto Trans
+              Jelajahi Destinasi Populer Bersama PT New Toretto Trans
             </h1>
             <p className="mt-6 max-w-xl text-base leading-8 text-muted sm:text-lg">
               Sebagai penyedia layanan Tour Travel Surabaya terpercaya, kami
@@ -373,7 +373,7 @@ export default function HomePage() {
           </h2>
           <p className="mt-4 text-base leading-8 text-muted">
             Apa kata para pelanggan yang telah mempercayakan perjalanan,
-            liburan, dan kebutuhan transportasi mereka kepada PT Toretto Trans.
+            liburan, dan kebutuhan transportasi mereka kepada PT New Toretto Trans.
           </p>
         </div>
 
