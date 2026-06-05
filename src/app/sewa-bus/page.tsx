@@ -7,9 +7,9 @@ const busVehicles = mockVehicles.filter((vehicle) => vehicle.type === "bis");
 export const metadata: Metadata = {
   title: "Sewa Bis Surabaya",
   description:
-    "Sewa Bis Surabaya dari Toretto Trans untuk rombongan wisata, sekolah, dan perjalanan perusahaan.",
+    "Sewa Bis Surabaya dari PT Toretto Trans untuk rombongan wisata, sekolah, dan perjalanan perusahaan.",
   openGraph: {
-    title: "Sewa Bis Surabaya | Toretto Trans",
+    title: "Sewa Bis Surabaya | PT Toretto Trans",
     description:
       "Armada bus nyaman untuk perjalanan rombongan dan event perusahaan.",
     url: "/sewa-bus",
@@ -44,6 +44,13 @@ export default function SewaBusPage() {
               </p>
             </article>
           ))}
+          {busVehicles.length % 2 !== 0 && (
+              <article className="rounded-3xl border border-white/10 bg-white/5 p-6 flex flex-col justify-center items-center text-center">
+                <h2 className="mt-3 text-xl font-semibold text-white">
+                  Coming Soon
+                </h2>
+              </article>
+            )}
         </div>
       </section>
     </main>

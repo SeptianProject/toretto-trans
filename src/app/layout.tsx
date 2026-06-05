@@ -20,17 +20,17 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://toretto-trans.example"),
   title: {
-    default: "Toretto Trans Tour & Travel",
-    template: "%s | Toretto Trans",
+    default: "PT Toretto Trans Tour & Travel",
+    template: "%s | PT Toretto Trans",
   },
   description:
-    "Toretto Trans menyediakan Tour Travel Surabaya, Sewa Bis Surabaya, dan Paket Tour Pantai dengan layanan premium.",
+    "PT Toretto Trans menyediakan Tour Travel Surabaya, Sewa Bis Surabaya, dan Paket Tour Pantai dengan layanan premium.",
   openGraph: {
-    title: "Toretto Trans Tour & Travel",
+    title: "PT Toretto Trans Tour & Travel",
     description:
       "Paket tour, sewa kendaraan, dan perjalanan wisata premium dari Surabaya.",
     url: "/",
-    siteName: "Toretto Trans",
+    siteName: "PT Toretto Trans",
     locale: "id_ID",
     type: "website",
   },

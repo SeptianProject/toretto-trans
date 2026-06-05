@@ -7,9 +7,9 @@ const carVehicles = mockVehicles.filter((vehicle) => vehicle.type === "mobil");
 export const metadata: Metadata = {
   title: "Sewa Mobil",
   description:
-    "Layanan sewa mobil Surabaya dari Toretto Trans untuk perjalanan keluarga, bisnis, dan wisata.",
+    "Layanan sewa mobil Surabaya dari PT Toretto Trans untuk perjalanan keluarga, bisnis, dan wisata.",
   openGraph: {
-    title: "Sewa Mobil | Toretto Trans",
+    title: "Sewa Mobil | PT Toretto Trans",
     description:
       "Pilihan armada mobil yang nyaman untuk perjalanan harian dan trip luar kota.",
     url: "/sewa-mobil",
@@ -28,7 +28,9 @@ export default function SewaMobilPage() {
           Armada mobil untuk perjalanan yang lebih fleksibel.
         </h1>
         <div className="mt-8 grid gap-5 md:grid-cols-2">
-          {carVehicles.map((vehicle) => (
+          
+          {
+            carVehicles.map((vehicle) => (
             <article
               key={vehicle.id}
               className="rounded-3xl border border-white/10 bg-white/5 p-6">
@@ -43,7 +45,14 @@ export default function SewaMobilPage() {
                 Mulai {formatCurrency(vehicle.pricePerDay)} / hari
               </p>
             </article>
-          ))}
+            ))}
+          {carVehicles.length % 2 !== 0 && (
+              <article className="rounded-3xl border border-white/10 bg-white/5 p-6 flex flex-col justify-center items-center text-center">
+                <h2 className="mt-3 text-xl font-semibold text-white">
+                  Coming Soon
+                </h2>
+              </article>
+            )}
         </div>
       </section>
     </main>
