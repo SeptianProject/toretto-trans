@@ -42,6 +42,7 @@ export default function SewaMobilPage() {
                       alt={`Gambar ${vehicle.name}`}
                       width={800} 
                       height={533} 
+                      unoptimized={true}
                       className="h-auto w-full object-contain" 
                     />
                   </div>
