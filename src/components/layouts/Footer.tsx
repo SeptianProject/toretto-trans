@@ -29,7 +29,9 @@ export function Footer() {
           <ul className="mt-4 space-y-3 text-sm text-muted">
             {FOOTER_LINKS.map((link) => (
               <li key={link.href}>
-                <Link href={link.href} className="transition hover:text-white">
+                <Link
+                  href={link.href}
+                  className="transition hover:text-amber-600">
                   {link.label}
                 </Link>
               </li>
@@ -56,7 +58,7 @@ export function Footer() {
             <li>
               <a
                 href="mailto:pt.newtorettotrans@gmail.com"
-                className="transition">
+                className="transition hover:text-amber-600">
                 pt.newtorettotrans@gmail.com
               </a>
             </li>
@@ -65,7 +67,7 @@ export function Footer() {
                 href="https://wa.me/6285103632966"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="transition">
+                className="transition hover:text-amber-600">
                 0851-0363-2966 (WhatsApp)
               </a>
             </li>
@@ -74,7 +76,7 @@ export function Footer() {
                 href="https://instagram.com/pt.newtorettotrans"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="transition">
+                className="transition hover:text-amber-600">
                 @pt.newtorettotrans
               </a>
             </li>

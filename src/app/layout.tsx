@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     type: "website",
   },
   icons: {
-    icon: "/PT_New_Toretto_Trans_Logo.jpeg",
+    icon: [{ url: "/PT_New_Toretto_Trans_Logo.jpeg", type: "image/jpeg" }],
     apple: "/PT_New_Toretto_Trans_Logo.jpeg",
   },
 };
