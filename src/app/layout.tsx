@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://toretto-trans.example"),
+  metadataBase: new URL("https://toretto.biz.id"),
   title: {
     default: "PT New Toretto Trans Tour & Travel",
     template: "%s | PT New Toretto Trans",

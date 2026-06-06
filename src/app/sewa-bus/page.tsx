@@ -2,21 +2,17 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import { mockVehicles } from "@/data/mock";
 import { formatCurrency } from "@/lib/utils";
+import { buildMetadata } from "@/components/Seo";
 
 const busVehicles = mockVehicles.filter((vehicle) => vehicle.type === "bis");
 
-export const metadata: Metadata = {
-  title: "Sewa Bis Surabaya",
+export const metadata: Metadata = buildMetadata({
+  title: "Sewa Bis Surabaya | PT New Toretto Trans",
   description:
     "Sewa Bis Surabaya dari PT New Toretto Trans untuk rombongan wisata, sekolah, dan perjalanan perusahaan.",
-  openGraph: {
-    title: "Sewa Bis Surabaya | PT New Toretto Trans",
-    description:
-      "Armada bus nyaman untuk perjalanan rombongan dan event perusahaan.",
-    url: "/sewa-bus",
-    type: "website",
-  },
-};
+  url: "/sewa-bus",
+  image: "/logo.png",
+});
 
 export default function SewaBusPage() {
   return (
@@ -32,8 +28,7 @@ export default function SewaBusPage() {
           {busVehicles.map((vehicle) => (
             <article
               key={vehicle.id}
-              className="flex flex-col rounded-3xl border border-white/10 bg-white/5 p-6"
-            >
+              className="flex flex-col rounded-3xl border border-white/10 bg-white/5 p-6">
               <div className="mb-5 w-full h-full overflow-hidden rounded-2xl bg-white/5 px-4 py-4 sm:px-8 sm:py-6 md:px-12 md:py-8 lg:px-20 lg:py-10 flex flex-col justify-center">
                 <Image
                   src={vehicle.image}
@@ -58,8 +53,7 @@ export default function SewaBusPage() {
                   {vehicle.features.map((feature, index) => (
                     <span
                       key={index}
-                      className="rounded-full bg-white/10 px-2.5 py-1 text-xs font-medium text-slate-300"
-                    >
+                      className="rounded-full bg-white/10 px-2.5 py-1 text-xs font-medium text-slate-300">
                       {feature}
                     </span>
                   ))}

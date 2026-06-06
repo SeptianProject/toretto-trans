@@ -1,19 +1,15 @@
 import type { Metadata } from "next";
 import { MapPin } from "lucide-react";
 import { mockDestinations } from "@/data/mock";
+import { buildMetadata } from "@/components/Seo";
 
-export const metadata: Metadata = {
-  title: "Destinasi Wisata",
+export const metadata: Metadata = buildMetadata({
+  title: "Destinasi Wisata | PT New Toretto Trans",
   description:
     "Daftar destinasi wisata unggulan PT New Toretto Trans untuk perjalanan pantai, pulau, dan alam dari Surabaya.",
-  openGraph: {
-    title: "Destinasi Wisata | PT New Toretto Trans",
-    description:
-      "Temukan destinasi terbaik untuk keluarga, komunitas, dan kantor.",
-    url: "/destinasi",
-    type: "website",
-  },
-};
+  url: "/destinasi",
+  image: "/logo.png",
+});
 
 export default function DestinasiPage() {
   return (

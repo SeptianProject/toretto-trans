@@ -2,19 +2,15 @@ import type { Metadata } from "next";
 import { Star } from "lucide-react";
 import { mockTours } from "@/data/mock";
 import { formatCurrency } from "@/lib/utils";
+import { buildMetadata } from "@/components/Seo";
 
-export const metadata: Metadata = {
-  title: "Paket Tour",
+export const metadata: Metadata = buildMetadata({
+  title: "Paket Tour | PT New Toretto Trans",
   description:
     "Daftar paket tour PT New Toretto Trans dengan kategori Pulau, Pantai, Alam, dan Gathering.",
-  openGraph: {
-    title: "Paket Tour | PT New Toretto Trans",
-    description:
-      "Pilih paket wisata yang sesuai dengan kebutuhan perjalanan Anda.",
-    url: "/tour",
-    type: "website",
-  },
-};
+  url: "/tour",
+  image: "/logo.png",
+});
 
 export default function TourPage() {
   return (

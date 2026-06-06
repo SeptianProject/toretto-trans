@@ -1,19 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { mockStats } from "@/data/mock";
+import { buildMetadata } from "@/components/Seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Tentang PT New Toretto Trans",
   description:
     "Profil PT New Toretto Trans sebagai penyedia Tour Travel Surabaya dan Sewa Bis Surabaya dengan fokus premium dan scalable.",
-  openGraph: {
-    title: "Tentang PT New Toretto Trans",
-    description:
-      "Pelajari visi, pengalaman, dan pendekatan layanan PT New Toretto Trans.",
-    url: "/tentang",
-    type: "website",
-  },
-};
+  url: "/tentang",
+  image: "/logo.png",
+});
 
 export default function AboutPage() {
   return (

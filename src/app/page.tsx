@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { buildMetadata } from "@/components/Seo";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -11,18 +12,13 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "PT New Toretto Trans | Tour Travel Surabaya & Sewa Bis Terpercaya",
   description:
     "Jelajahi destinasi impian Anda bersama PT New Toretto Trans, penyedia jasa Tour Travel Surabaya dan Sewa Bis Surabaya terbaik. Berpengalaman 5+ tahun melayani Paket Tour Pantai, Alam, hingga Corporate Gathering dengan layanan pemesanan mudah (Easy Bookings).",
-  openGraph: {
-    title: "PT New Toretto Trans | Tour Travel Surabaya & Sewa Bis Terpercaya",
-    description:
-      "Paket tour, transportasi, dan perjalanan premium dari Surabaya untuk liburan keluarga maupun corporate gathering.",
-    url: "/",
-    type: "website",
-  },
-};
+  url: "/",
+  image: "/logo.png",
+});
 
 interface TourCard {
   title: string;
@@ -370,7 +366,8 @@ export default function HomePage() {
           </h2>
           <p className="mt-4 text-base leading-8 text-muted">
             Apa kata para pelanggan yang telah mempercayakan perjalanan,
-            liburan, dan kebutuhan transportasi mereka kepada PT New Toretto Trans.
+            liburan, dan kebutuhan transportasi mereka kepada PT New Toretto
+            Trans.
           </p>
         </div>
 

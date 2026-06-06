@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Point to sitemap for crawlers
+Sitemap: https://toretto.biz.id/sitemap.xml
