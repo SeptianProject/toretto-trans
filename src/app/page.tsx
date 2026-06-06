@@ -2,15 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import {
   ArrowRight,
-  CalendarDays,
   Compass,
-  Globe2,
   Headset,
   ShieldCheck,
   Sparkles,
   Star,
   Ticket,
-  Users,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
