@@ -5,9 +5,9 @@ import { mockDestinations } from "@/data/mock";
 export const metadata: Metadata = {
   title: "Destinasi Wisata",
   description:
-    "Daftar destinasi wisata unggulan Toretto Trans untuk perjalanan pantai, pulau, dan alam dari Surabaya.",
+    "Daftar destinasi wisata unggulan PT New Toretto Trans untuk perjalanan pantai, pulau, dan alam dari Surabaya.",
   openGraph: {
-    title: "Destinasi Wisata | Toretto Trans",
+    title: "Destinasi Wisata | PT New Toretto Trans",
     description:
       "Temukan destinasi terbaik untuk keluarga, komunitas, dan kantor.",
     url: "/destinasi",

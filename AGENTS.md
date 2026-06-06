@@ -1,8 +1,8 @@
 <!-- BEGIN:nextjs-agent-rules -->
 
-# Toretto Trans Tour & Travel
+# PT New Toretto Trans Tour & Travel
 
-This repository rebuilds the Toretto Trans frontend with the Next.js App Router and a production-focused SEO and UX baseline.
+This repository rebuilds the PT New Toretto Trans frontend with the Next.js App Router and a production-focused SEO and UX baseline.
 
 ## Stack
 

@@ -22,7 +22,7 @@ export function BrandLogo({
       <span className="flex shrink-0 items-center justify-center overflow-hidden rounded-2xl bg-white p-1 ring-1 ring-white/10">
         <Image
           src="/PT_New_Toretto_Trans_Logo.jpeg"
-          alt="Logo PT New Toretto Trans"
+          alt="Logo PT New PT New Toretto Trans"
           width={sizeClasses[size].image}
           height={sizeClasses[size].image}
           className="h-auto w-auto object-contain"
@@ -32,7 +32,7 @@ export function BrandLogo({
       {showText ? (
         <span>
           <span className="block text-base font-semibold tracking-wide text-heading">
-            Toretto Trans
+            PT New Toretto Trans
           </span>
           <span className="block text-xs text-muted">Tour Travel Surabaya</span>
         </span>
