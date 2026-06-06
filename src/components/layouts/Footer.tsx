@@ -10,10 +10,6 @@ const FOOTER_LINKS = [
 ];
 
 export function Footer() {
-  const isDark =
-    typeof window !== "undefined" &&
-    document.documentElement.classList.contains("dark");
-
   return (
     <footer className="border-t border-subtle surface-panel">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 lg:grid-cols-[1.4fr_0.8fr_0.8fr_0.8fr] lg:px-8">

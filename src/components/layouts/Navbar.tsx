@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 
-const NAV_LINKS = [
+export const NAV_LINKS = [
   { href: "/", label: "Beranda" },
   { href: "/tour", label: "Tour" },
   { href: "/destinasi", label: "Destinasi" },
@@ -12,12 +12,12 @@ const NAV_LINKS = [
 
 export function Navbar() {
   return (
-    <nav aria-label="Navigasi utama" className="hidden gap-6 lg:flex">
+    <nav aria-label="Navigasi utama" className="hidden gap-6 md:flex">
       {NAV_LINKS.map((link) => (
         <Link
           key={link.href}
           href={link.href}
-          className="text-sm font-medium text-slate-300 transition hover:text-white">
+          className="text-sm font-medium text-slate-700 transition hover:text-slate-950">
           {link.label}
         </Link>
       ))}
