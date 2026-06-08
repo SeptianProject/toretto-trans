@@ -20,7 +20,7 @@ export const mockTours: Tour[] = [
     duration: "2 Hari 1 Malam",
     minParticipants: 5,
     maxParticipants: 20,
-    image: "/images/tours/madura.jpg",
+    image: "/images/tours/pulau madura.webp",
     rating: 4.8,
     reviewCount: 32,
     highlights: [
@@ -42,7 +42,7 @@ export const mockTours: Tour[] = [
     duration: "1 Hari",
     minParticipants: 8,
     maxParticipants: 30,
-    image: "/images/tours/papuma.jpg",
+    image: "/images/tours/pantai papuma.jpg",
     rating: 4.9,
     reviewCount: 47,
     highlights: ["Pantai Papuma", "Watu Ulo", "Snorkeling", "Sunset View"],
@@ -59,7 +59,7 @@ export const mockTours: Tour[] = [
     duration: "2 Hari 1 Malam",
     minParticipants: 6,
     maxParticipants: 25,
-    image: "/images/tours/bromo.jpg",
+    image: "/images/tours/sunrise bromo.png",
     rating: 5.0,
     reviewCount: 61,
     highlights: [
@@ -81,7 +81,7 @@ export const mockTours: Tour[] = [
     duration: "Fleksibel",
     minParticipants: 20,
     maxParticipants: 100,
-    image: "/images/tours/gathering.jpg",
+    image: "/images/tours/gathering.png",
     rating: 4.7,
     reviewCount: 28,
     highlights: [
@@ -103,7 +103,7 @@ export const mockTours: Tour[] = [
     duration: "3 Hari 2 Malam",
     minParticipants: 8,
     maxParticipants: 20,
-    image: "/images/tours/bawean.jpg",
+    image: "/images/tours/pulau bawean.webp",
     rating: 4.9,
     reviewCount: 19,
     highlights: [
@@ -125,7 +125,7 @@ export const mockTours: Tour[] = [
     duration: "2 Hari 1 Malam",
     minParticipants: 5,
     maxParticipants: 15,
-    image: "/images/tours/gland.jpg",
+    image: "/images/tours/g land surfing.jpg",
     rating: 4.8,
     reviewCount: 22,
     highlights: [
