@@ -19,17 +19,24 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://toretto.biz.id"),
   title: {
-    default: "PT New Toretto Trans Tour & Travel",
-    template: "%s | PT New Toretto Trans",
+    default: "Toretto Trans | Sewa Bus & Mobil Surabaya",
+    template: "%s | Toretto Trans Surabaya",
   },
   description:
-    "PT New Toretto Trans menyediakan Tour Travel Surabaya, Sewa Bis Surabaya, dan Paket Tour Pantai dengan layanan premium.",
+    "Layanan sewa bus pariwisata, mobil harian, dan paket tour travel dari Surabaya. Armada premium, harga transparan, dan terpercaya.",
+  keywords: [
+    "sewa bus surabaya",
+    "sewa mobil surabaya",
+    "tour travel surabaya",
+    "rental hiace surabaya",
+    "toretto trans",
+  ],
   openGraph: {
-    title: "PT New Toretto Trans Tour & Travel",
+    title: "Toretto Trans | Sewa Bus & Mobil Surabaya",
     description:
       "Paket tour, sewa kendaraan, dan perjalanan wisata premium dari Surabaya.",
-    url: "/",
-    siteName: "PT New Toretto Trans",
+    url: "https://toretto.biz.id",
+    siteName: "Toretto Trans",
     locale: "id_ID",
     type: "website",
   },
@@ -37,6 +44,10 @@ export const metadata: Metadata = {
     icon: [{ url: "/favicon.ico" }, { url: "/logo.png", type: "image/png" }],
     apple: "/logo.png",
     shortcut: "/favicon.ico",
+  },
+  verification: {
+    google:
+      "google-site-verification=5DSjLU2ZIQ88StpPAC-v509BWuJqEgb8dZW0TVMPzx4",
   },
 };
 
