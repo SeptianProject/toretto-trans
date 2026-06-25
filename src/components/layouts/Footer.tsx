@@ -44,8 +44,8 @@ export function Footer() {
             Jam Operasional
           </p>
           <ul className="mt-4 space-y-3 text-sm text-muted">
-            <li>Senin - Sabtu</li>
-            <li>10.00 - 17.00 WIB</li>
+            <li>Senin - Minggu</li>
+            <li>08.00 - 17.00 WIB</li>
             <li>Layanan darurat 24/7 saat perjalanan</li>
           </ul>
         </div>

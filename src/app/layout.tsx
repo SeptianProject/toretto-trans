@@ -4,6 +4,7 @@ import { Footer } from "@/components/layouts/Footer";
 import { Header } from "@/components/layouts/Header";
 import { AppProviders } from "@/components/providers/AppProviders";
 import { PageTransition } from "@/components/transitions/PageTransition";
+import Script from "next/script";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -56,6 +57,33 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "AutoRental",
+    name: "PT New Toretto Trans Tour & Travel",
+    url: "https://toretto.biz.id",
+    logo: "https://toretto.biz.id/logo.png",
+    image: "https://toretto.biz.id/logo.png",
+    description:
+      "Layanan sewa bus pariwisata dan mobil harian di Surabaya. Tour & Travel terpercaya.",
+    telephone: "+6285103632966",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress:
+        "Jl. Tenggilis Lama IV No.10, Tenggilis Mejoyo, Kec. Tenggilis Mejoyo",
+      addressLocality: "Surabaya",
+      addressRegion: "Jawa Timur",
+      postalCode: "60292",
+      addressCountry: "ID",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: -7.316676436476973,
+      longitude: 112.76134798234531,
+    },
+    areaServed: ["Surabaya", "Sidoarjo", "Gresik", "Malang"],
+  };
+
   return (
     <html
       lang="id"
@@ -63,6 +91,11 @@ export default async function RootLayout({
       data-theme="light"
       className={`light ${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
       <body className="app-shell min-h-full">
+        <Script
+          id="local-business-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <AppProviders>
           <div className="min-h-screen app-hero">
             <Header />
