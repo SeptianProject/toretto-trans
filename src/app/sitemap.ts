@@ -2,11 +2,10 @@ import { MetadataRoute } from "next";
 import { mockTours, mockVehicles } from "@/data/mock";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  // Pastikan HARUS tanpa trailing slash di akhir
   const baseUrl = "https://toretto.biz.id";
   const now = new Date();
 
-  // 1. Static Routes
+  // Static Routes
   const staticRoutes: MetadataRoute.Sitemap = [
     "",
     "/tour",
@@ -21,7 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: route === "" ? 1.0 : 0.8,
   }));
 
-  // 2. Dynamic Tour Routes
+  // Dynamic Tour Routes
   const tourRoutes: MetadataRoute.Sitemap = mockTours.map((t) => ({
     url: `${baseUrl}/tour/${t.slug}`,
     lastModified: now,
@@ -29,7 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  // 3. Dynamic Vehicle Routes
+  // Dynamic Vehicle Routes
   const vehicleRoutes: MetadataRoute.Sitemap = mockVehicles.map((v) => ({
     url: `${baseUrl}/${v.type === "mobil" ? "sewa-mobil" : "sewa-bus"}/${v.id}`,
     lastModified: now,
