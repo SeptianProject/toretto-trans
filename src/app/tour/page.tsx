@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Star } from "lucide-react";
@@ -27,6 +28,15 @@ export default function TourPage() {
           {mockTours.map((tour) => (
             <Link key={tour.id} href={`/tour/${tour.slug}`} className="block">
               <article className="h-full flex flex-col rounded-3xl border border-white/10 bg-white/5 p-6 hover:shadow-lg transition">
+                <div className="relative w-full h-[200px] overflow-hidden rounded-2xl mb-6">
+                  <Image
+                    src={tour.image}
+                    alt={tour.title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 500px"
+                  />
+                </div>
                 <div className="flex items-center justify-between gap-4">
                   <p className="text-sm text-amber-300">{tour.category}</p>
                   <span className="inline-flex items-center gap-1 text-sm text-slate-300">

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { Metadata } from "next";
 import { MapPin } from "lucide-react";
 import { mockDestinations } from "@/data/mock";
@@ -26,10 +27,21 @@ export default function DestinasiPage() {
             <article
               key={destination.id}
               className="rounded-3xl border border-white/10 bg-white/5 p-6">
-              <MapPin className="h-5 w-5 text-amber-300" />
-              <p className="mt-4 text-sm text-slate-400">
-                {destination.province}
-              </p>
+                <div className="relative w-full h-[200px] overflow-hidden rounded-2xl mb-5">
+                  <Image
+                    src={destination.image}
+                    alt={destination.name}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 500px"
+                  />
+                </div>
+              <div className="flex items-end w-full gap-2">
+                <MapPin className="h-5 w-5 text-amber-300" />
+                <p className="text-sm text-slate-400">
+                  {destination.province}
+                </p>
+              </div>
               <h2 className="mt-2 text-xl font-semibold text-white">
                 {destination.name}
               </h2>
